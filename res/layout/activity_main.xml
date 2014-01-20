@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/bg" >
+
+    
+    <TextView
+        android:id="@+id/tvMissed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bSubmitLetter"
+        android:layout_alignLeft="@+id/bSubmitLetter"
+        android:layout_marginBottom="32dp"
+        android:text="@string/tvsMissed" />
+
+    <Button
+        android:id="@+id/bSubmitLetter"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="14dp"
+        android:text="@string/bsSubmitLetter" />
+
+    <Button
+        android:id="@+id/bSubmitWord"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bSubmitLetter"
+        android:layout_alignBottom="@+id/bSubmitLetter"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/bsSubmitWord" />
+
+    <TextView
+        android:id="@+id/tvWordLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvMissed"
+        android:layout_alignBottom="@+id/tvMissed"
+        android:layout_alignLeft="@+id/bSubmitWord"
+        android:text="@string/tvsWordLength" />
+
+    <EditText
+        android:id="@+id/editTextSubmitLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bSubmitWord"
+        android:layout_alignBottom="@+id/bSubmitWord"
+        android:layout_toLeftOf="@+id/bSubmitWord"
+        android:layout_toRightOf="@+id/bSubmitLetter"
+        android:ems="10"
+        android:hint="@string/tvString" />
+
+    <EditText
+        android:id="@+id/editTextSubmitWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bSubmitWord"
+        android:layout_alignBottom="@+id/bSubmitWord"
+        android:layout_toRightOf="@+id/bSubmitWord"
+        android:ems="10"
+        android:hint="@string/tvString" >
+
+        <requestFocus />
+    </EditText>
+
+    <View
+        android:id="@+id/viewHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="39dp"
+        android:layout_marginTop="24dp"
+        android:background="#2B497B"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp"
+        android:scaleType="fitXY" >
+    </View>
+
+    <View
+        android:id="@+id/viewVertical1"
+        android:layout_width="3dip"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bSubmitLetter"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="39dp"
+        android:layout_marginTop="24dp"
+        android:background="#2B497B"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp" />
+
+    <View
+        android:id="@+id/viewVertical2"
+        android:layout_width="3dip"
+        android:layout_height="10dip"
+        android:layout_alignLeft="@+id/viewHorizontal"
+        android:layout_below="@+id/viewHorizontal"
+        android:background="#2B497B"
+        android:orientation="vertical"
+        android:paddingBottom="170dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp" />
+
+    <TextView
+        android:id="@+id/textViewWordPuzzle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvMissed"
+        android:layout_alignRight="@+id/tvWordLength"
+        android:layout_below="@+id/viewVertical2"
+        android:layout_marginTop="20dp"
+        android:maxLength="200"
+        android:text="@string/tvString" />
+
+</RelativeLayout>
